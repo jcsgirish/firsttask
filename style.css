@@ -1,0 +1,113 @@
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(rgb(245, 233, 193),rgb(202, 190, 176));
+}
+.container{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    box-shadow: 0 5px 10px #abb2b9;
+
+}
+h1{
+    font-size: 26px;
+    font-weight: 600;
+    text-align:center;
+    color:#a8814e;
+    padding-bottom: 8px;
+    border-bottom: 1px solid  silver;
+
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0 ;
+}
+.input-box
+{
+    display: flex;
+    flex-wrap: wrap;
+    width:50%;
+    padding-bottom: 20px;
+}
+.input-box:nth-child(2n){
+    justify-content:end;
+}
+.input-box label,.gender-title{
+    width:95%;
+    color: #856e3d;
+    font-weight:bold;
+    margin: 5px 0;
+}
+.gender-title{
+    font-size: 16px;
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(165, 134, 104);
+    outline: none;
+}
+.input-box input:is(:focus,:valid){
+    box-shadow:0 1px 3px rgb(255, 255, 255);
+}
+.gender-category{
+    color: rgb(32, 31, 31);
+
+}
+.gender-category label{
+    padding: 0 20px 0 5px;
+    font-size:10px;
+
+}
+.gender-category label,.gender-category input{
+    cursor: pointer;
+}
+.button-container{
+    margin: 15px 0;
+}
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display:block;
+    font-size: 20px;
+    color: rgb(8, 8, 8);
+    border:none;
+    border-radius:5px;
+    background-image:linear-gradient(#a8959b,rgb(134, 132, 121))
+}
+@media(max-width:600){
+    .container{
+        min-width: 280px;;
+    }
+    .content{
+        max-height:380px;
+        overflow:auto;
+    }
+    .input-box{
+        margin-bottom: 12px;
+        width:100%;
+    }
+    .input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+    .gender-category{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+}
