@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrationform</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#"onsubmit="onsignup(event)">
+            
+            <h1>REGISTRATION</h1>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name">FULLNAME</label>
+                    <input type="text"placeholder="Enter name" name="name" required>
+
+                </div>
+                <div class="input-box">
+                    <label for="email">EMAIL</label>
+                    <input type="email"placeholder="Enter valid email" name="email" required>
+
+                </div>
+                <div class="input-box">
+                    <label for="phonenumber">PHONENUMBER</label>
+                    <input type="tel"placeholder="Enter phonenumber" name="phonenumber" maxlength="10" required>
+
+                </div>
+                <div class="input-box">
+                    <label for="password">PASSWORD</label>
+                    <input type="password"placeholder="Enter Password" name="password" required>
+
+                </div>
+                <div class="input-box">
+                    <label for="confirmpassword">CONFIRM PASSWORD</label>
+                    <input type="password"placeholder="Confirm password" name="confirmpassword" required>
+
+                </div>
+                <span class="gender-title">GENDER</span>
+                <div class="gender-categoray">
+                <input type="radio" name="gender" id="male">
+                <label for="gender" >MALE</label>
+                <input type="radio" name="gender" id="female">
+                <label for="gender" >FEMALE</label>
+                <input type="radio" name="gender" id="other">
+                <label for="gender" >OTHER</label>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit">REGISTER</button>
+            </div>
+
+        </form>
+        <script>
+            function onsignup (event)
+       {
+               event.preventDefault()
+
+           console.log(event.target.name.value)
+
+           console.log(event.target.email.value)
+
+           console.log(event.target.phonenumber.value)
+
+           console.log(event.target.password.value)
+
+           console.log(event.target.confirmpassword.value)
+
+           
+
+
+            
+
+       }
+        </script>
+    </div>
+    
+</body>
+</html>
